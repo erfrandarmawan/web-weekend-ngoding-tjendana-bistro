@@ -104,6 +104,52 @@
       </div>
     </section>
     <!-- ./Popular Menu Section -->
+
+    <!-- Moment Section -->
+    <section id="section-popular-menu" class="w-full min-h-screen flex flex-col items-center bg-cover bg-center bg-no-repeat bg-fixed relative" style="background-image: url('https://clothy-backend.develobe.id/images/1706767464417.webp')">
+      <div class="bg-white bg-opacity-50 absolute top-0 w-full h-full z-10 backdrop-blur"></div>
+
+      <div class="flex flex-col z-10">
+        <h1 class="text-6xl uppercase mt-20 text-center"><span class="text-primary">Create Special Moments</span><br><span class="text-secondary">With Us</span></h1>
+
+        <div class="flex flex-row w-full justify-center mt-20 font-poppins font-extralight items-center gap-24">
+          <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
+            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+              class="w-full h-full object-cover"/>
+          </div>
+
+          <h2 class="uppercase text-8xl">Dine In</h2>
+        </div>
+
+        <div class="flex flex-row-reverse w-full justify-center mt-28 font-poppins font-extralight items-center gap-24">
+          <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
+            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+              class="w-full h-full object-cover"/>
+          </div>
+
+          <h2 class="uppercase text-8xl">Wedding</h2>
+        </div>
+
+        <div class="flex flex-row w-full justify-center mt-28 font-poppins font-extralight items-center gap-24">
+          <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
+            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+              class="w-full h-full object-cover"/>
+          </div>
+
+          <h2 class="uppercase text-8xl">Birthday</h2>
+        </div>
+
+        <div class="flex flex-row-reverse w-full justify-center mt-28 mb-20 font-poppins font-extralight items-center gap-24">
+          <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
+            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+              class="w-full h-full object-cover"/>
+          </div>
+
+          <h2 class="uppercase text-8xl">Meeting</h2>
+        </div>
+      </div>
+    </section>
+    <!-- ./Moment Section -->
   </main>
 </template>
 
