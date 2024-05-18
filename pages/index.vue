@@ -14,10 +14,10 @@
             <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full object-cover" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide4" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a> 
               <a href="#slide2" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a>
             </div>
           </div>
@@ -26,10 +26,10 @@
             <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full object-cover" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide1" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a> 
               <a href="#slide3" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a>
             </div>
           </div>
@@ -38,10 +38,10 @@
             <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full object-cover" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide2" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a> 
               <a href="#slide4" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a>
             </div>
           </div>
@@ -50,10 +50,10 @@
             <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full object-cover" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide3" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a> 
               <a href="#slide1" class="btn btn-circle">
-                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="h-4 w-4"></font-awesome-icon></ClientOnly>
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a>
             </div>
           </div>
@@ -150,6 +150,40 @@
       </div>
     </section>
     <!-- ./Moment Section -->
+
+    <!-- Contact Section -->
+    <section id="section-contact" class="w-full h-screen flex flex-col items-center justify-center relative">
+      <div class="w-full flex items-center gap-2 md:gap-10 xl:gap-10">
+        <div class="w-5/12 md:w-1/2 xl:w-1/2 flex justify-end">
+          <img id="img-contact" src="https://ik.imagekit.io/b3amk7ihm/tjendana_logo.png" class="w-24 min-w-24 md:w-60 md:min-w-60 xl:w-60 xl:min-w-60 h-fit"/>
+        </div>
+
+        <div id="divider-contact" class="w-0.5 h-16 md:h-32 xl:h-32 bg-secondary"></div>
+
+        <div class="flex flex-col text-black w-7/12 md:w-1/2 xl:w-1/2 gap-3">
+          <div class="flex items-center gap-1 md:gap-2 xl:gap-2">
+            <span id="text-location-tjendana" class="text-xs md:text-lg xl:text-xl" aria-label="Jl. Sukajadi, No. 181 Bandung, Indonesia 40161"></span>
+          </div>
+          
+          <div class="flex items-center gap-1 md:gap-2 xl:gap-2">
+            <span id="text-time-tjendana" class="text-xs md:text-lg xl:text-xl" aria-label="Senin - Minggu | 10.00 - 21.00"></span>
+          </div>
+
+          <div class="flex items-center gap-1 md:gap-2 xl:gap-2">
+            <a id="link-instagram-tjendana" href="https://www.instagram.com/tjendanabistro/" class="text-xs md:text-lg xl:text-xl link link-hover" target="_blank" rel="noreferrer noopener" aria-label="@tjendanabistro"></a>
+          </div>
+
+          <div class="flex items-center gap-1 md:gap-2 xl:gap-2">
+            <span id="text-phone-tjendana" class="text-xs md:text-lg xl:text-xl" aria-label="(022) 2034622 / 085339887000"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="developer-info" class="text-black absolute bottom-0 mb-5 md:mb-10 xl:mb-10 font-poppins text-xs md:text-base xl:text-lg text-center">
+        Made by <a href="https://www.instagram.com/erfrandarmawan" class="link link-hover text-secondary font-bold">Erfran Darmawan</a> from <a href="https://develobe.id/" class="link link-hover text-secondary font-bold">DEVELOBE.ID</a>
+      </div>
+    </section>
+    <!-- ./Contact Section -->
   </main>
 </template>
 
