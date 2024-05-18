@@ -11,7 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins']
+        poppins: ['Poppins'],
+        teachers: ['Teachers']
       }
     },
   },
@@ -24,7 +25,8 @@ export default {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          primary: "#38B6FF"
+          primary: "#B89339",
+          secondary: "#86353D"
         },
       },
     ],

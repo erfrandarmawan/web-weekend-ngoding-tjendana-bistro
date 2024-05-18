@@ -8,12 +8,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
-  modules: ["@pinia/nuxt"],
-
-  runtimeConfig: {
-    public: {
-      BASE_API_URL: process.env.NUXT_PUBLIC_BASE_API_URL || "",
-    }
-  }
 })
