@@ -292,7 +292,11 @@
           duration: 0.5,
           y: -50,
           opacity: 0,
-        }, "<");
+        }, "<")
+        .to("#section-landing-page", {
+          duration: 0.5,
+          y: -1920,
+        });
     });
   }
 
