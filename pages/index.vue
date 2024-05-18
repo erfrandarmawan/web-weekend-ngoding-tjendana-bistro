@@ -1,8 +1,11 @@
 <template>
   <main class="w-full h-auto flex flex-col bg-white font-teachers">
     <!-- Landing Page Section -->
-    <section id="section-landing-page" class="w-full h-screen flex items-center justify-center">
-      <img src="https://ik.imagekit.io/b3amk7ihm/tjendana_logo.png" class="w-40 md:w-60 xl:w-60"/>
+    <section id="section-landing-page" class="w-full h-screen flex items-center justify-center absolute top-0 z-10 bg-white">
+      <img id="logo-landing-page"
+        src="https://ik.imagekit.io/b3amk7ihm/tjendana_logo.png" 
+        class="w-40 md:w-60 xl:w-60"
+        :class="isMounted ? 'opacity-100' : 'opacity-0'"/>
     </section>
     <!-- ./Landing Page Section -->
 
@@ -188,6 +191,11 @@
 </template>
 
 <script setup lang="ts">
+  // Import library
+  import gsap from 'gsap';
+  import { TextPlugin } from 'gsap/TextPlugin';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
   // Heading and set body attributes
   useHead({
     title: 'Tjendana Bistro',
@@ -256,5 +264,52 @@
       "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
     }
   ]);
+
+  // Variables
+  let ctx: any;
+  const isMounted = ref(false);
+
+  // Register GSAP plugin
+  gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(ScrollTrigger);
+  
+  // Functions
+  function animatePage(){
+    // Animate page
+    ctx = gsap.context((self: any) => {
+      // Landing page animation
+      gsap.timeline()
+        .from("#logo-landing-page", {
+          duration: 0.5,
+          opacity: 0,
+        })
+        .to("#section-landing-page", {
+          delay: 1,
+          duration: 0.5,
+          opacity: 0,
+        })
+        .to("#logo-landing-page", {
+          duration: 0.5,
+          y: -50,
+          opacity: 0,
+        }, "<");
+    });
+  }
+
+  // Lifecycle Callback
+  onMounted(() => {
+    // Set flag mounted
+    isMounted.value = true;
+
+    // Animate page
+    animatePage();
+  });
+
+  onUnmounted(() => {
+    // Revert to original state
+    if (ctx){
+      ctx.revert();
+    }
+  });
 
 </script>
