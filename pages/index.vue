@@ -326,7 +326,12 @@
         });
 
       // Popular menu animation
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-popular-menu",
+            start: 'top 50%',
+          }
+        })
         .to("#text-popular", {
           duration: 0.8,
           ease: "none",
@@ -344,7 +349,12 @@
         });
 
       // Moment animation
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-moment",
+            start: 'top 50%',
+          }
+        })
         .to("#text-create-moment", {
           duration: 1.5,
           ease: "none",
@@ -359,16 +369,37 @@
           duration: 0.5,
           opacity: 0,
           y: 50,
+        });
+
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#moment-dine-in",
+            start: '50% top',
+          }
         })
         .from("#moment-wedding", {
           duration: 0.5,
           opacity: 0,
           y: 50,
+        });
+      
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#moment-wedding",
+            start: '50% top',
+          }
         })
         .from("#moment-birthday", {
           duration: 0.5,
           opacity: 0,
           y: 50,
+        });
+
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#moment-birthday",
+            start: '50% top',
+          }
         })
         .from("#moment-meeting", {
           duration: 0.5,
@@ -377,7 +408,13 @@
         });
 
       // Contact animation
-      gsap.timeline()
+      gsap.timeline({
+          scrollTrigger: {
+            trigger: "#section-contact",
+            start: '50% 50%',
+            markers: true,
+          }
+        })
         .from("#divider-contact", {
           duration: 0.5,
           y: 40,
@@ -410,7 +447,6 @@
         }, "<")
         .from("#developer-info", {
           duration: 0.5,
-          y: 50,
           opacity: 0
         })
     });
