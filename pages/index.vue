@@ -80,7 +80,7 @@
 
     <!-- Popular Menu Section -->
     <section id="section-popular-menu" class="w-full h-screen flex flex-col items-center justify-center">
-      <h1 class="text-6xl uppercase"><span class="text-primary">Popular</span> <span class="text-secondary">Menu</span></h1>
+      <h1 class="text-6xl uppercase"><span id="text-popular" class="text-primary"></span> <span id="text-menu" class="text-secondary"></span></h1>
 
       <div id="swiper-popular-menu" class='w-full h-auto overflow-hidden mt-5 lg:mt-20'>
         <Swiper
@@ -323,6 +323,24 @@
         .from("#link-wrapper-explore-tjendana", {
           duration: 0.5,
           opacity: 0,
+        });
+
+      // Popular menu animation
+      gsap.timeline()
+        .to("#text-popular", {
+          duration: 0.8,
+          ease: "none",
+          text: "Popular"
+        })
+        .to("#text-menu", {
+          duration: 0.8,
+          ease: "none",
+          text: "Menu"
+        })
+        .from("#swiper-popular-menu", {
+          duration: 0.5,
+          opacity: 0,
+          y: 50,
         });
     });
   }
