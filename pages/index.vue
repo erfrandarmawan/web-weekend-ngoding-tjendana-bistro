@@ -374,6 +374,44 @@
           duration: 0.5,
           opacity: 0,
           y: 50,
+        });
+
+      // Contact animation
+      gsap.timeline()
+        .from("#divider-contact", {
+          duration: 0.5,
+          y: 40,
+          opacity: 0
+        })
+        .from("#img-contact", {
+          duration: 0.5,
+          x: 60,
+          opacity: 0
+        })
+        .to("#text-location-tjendana", {
+          duration: 1.5,
+          ease: "none",
+          text: "Jl. Sukajadi, No. 181 Bandung, Indonesia 40161"
+        })
+        .to("#text-time-tjendana", {
+          duration: 1.5,
+          ease: "none",
+          text: "Senin - Minggu | 10.00 - 21.00"
+        }, "<")
+        .to("#link-instagram-tjendana", {
+          duration: 1.5,
+          ease: "none",
+          text: "@tjendanabistro"
+        }, "<")
+        .to("#text-phone-tjendana", {
+          duration: 1.5,
+          ease: "none",
+          text: "(022) 2034622 / 085339887000"
+        }, "<")
+        .from("#developer-info", {
+          duration: 0.5,
+          y: 50,
+          opacity: 0
         })
     });
   }
