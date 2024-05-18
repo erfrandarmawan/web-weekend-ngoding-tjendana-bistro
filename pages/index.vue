@@ -61,7 +61,7 @@
       </div>
 
       <div class="w-1/3 h-screen flex flex-col justify-center p-10">
-        <h1 class="text-5xl"><span class="text-secondary">Tjendana</span> <span class="text-primary">Bistro</span></h1>
+        <h3 class="text-5xl"><span class="text-secondary">Tjendana</span> <span class="text-primary">Bistro</span></h3>
         <p class="font-poppins mt-5 text-2xl italic font-light">We will make you feel like home, a sense of comfort and warmth with authentic Asian dishes cooked with all our heart</p>
 
         <a href="https://maps.app.goo.gl/fPeCZPHwxjAR1aaLA" target="_blank" rel="noopener noreferrer"
@@ -71,6 +71,39 @@
       </div>
     </section>
     <!-- ./Gallery Section -->
+
+    <!-- Popular Menu Section -->
+    <section id="section-popular-menu" class="w-full h-screen flex flex-col items-center justify-center">
+      <h1 class="text-6xl uppercase"><span class="text-primary">Popular</span> <span class="text-secondary">Menu</span></h1>
+
+      <div id="swiper-popular-menu" class='w-full h-auto overflow-hidden mt-5 lg:mt-20'>
+        <Swiper
+          :modules="[SwiperParallax]"
+          :loop="true"
+          :slides-per-view="1"
+          :slides-per-group="1"
+          :space-between="0"
+          :speed="500"
+          :slides-offset-before="0"
+          :breakpoints="{
+            '768': {
+              slidesPerView: 3,
+              spaceBetween: 150,
+              slidesOffsetBefore: 0
+            },
+            '1024': {
+              slidesPerView: 3,
+              spaceBetween: 50,
+              slidesOffsetBefore: 0
+            },
+          }">
+          <SwiperSlide v-for="(item, index) in popularMenu" :key="index">
+            <img :src="item.image" class='w-[270px] min-w-[270px] h-[324px] min-h-[324px] lg:w-[360px] lg:min-w-[360px] lg:h-[432px] lg:min-h-[432px] object-cover rounded-[20px] duration-300 mx-auto'/>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
+    <!-- ./Popular Menu Section -->
   </main>
 </template>
 
@@ -103,4 +136,45 @@
       { name: 'twitter:image', content: 'TODO' },
     ],
   })
+
+  // Variables
+  const popularMenu = ref([
+    {
+      "name": "ABC",
+      "image": "https://clothy-backend.develobe.id/images/1706767464417.webp"
+    },
+    {
+      "name": "BCA",
+      "image": "https://clothy-backend.develobe.id/images/1706767454658.webp"
+    },
+    {
+      "name": "DEV",
+      "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
+    },
+    {
+      "name": "ABC",
+      "image": "https://clothy-backend.develobe.id/images/1706767464417.webp"
+    },
+    {
+      "name": "BCA",
+      "image": "https://clothy-backend.develobe.id/images/1706767454658.webp"
+    },
+    {
+      "name": "DEV",
+      "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
+    },
+    {
+      "name": "ABC",
+      "image": "https://clothy-backend.develobe.id/images/1706767464417.webp"
+    },
+    {
+      "name": "BCA",
+      "image": "https://clothy-backend.develobe.id/images/1706767454658.webp"
+    },
+    {
+      "name": "DEV",
+      "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
+    }
+  ]);
+
 </script>
