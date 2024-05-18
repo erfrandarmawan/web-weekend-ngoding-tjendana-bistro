@@ -11,8 +11,8 @@
 
     <!-- Gallery Section -->
     <section id="section-gallery" class="w-full h-screen flex items-center justify-center">
-      <div class="w-2/3 h-screen bg-red-100">
-        <div class="carousel w-full h-screen">
+      <div class="w-2/3 h-screen">
+        <div id="image-carousel" class="carousel w-full h-screen">
           <div id="slide1" class="carousel-item relative w-full">
             <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full object-cover" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -64,13 +64,16 @@
       </div>
 
       <div class="w-1/3 h-screen flex flex-col justify-center p-10">
-        <h3 class="text-5xl"><span class="text-secondary">Tjendana</span> <span class="text-primary">Bistro</span></h3>
-        <p class="font-poppins mt-5 text-2xl italic font-light">We will make you feel like home, a sense of comfort and warmth with authentic Asian dishes cooked with all our heart</p>
+        <h3 class="text-5xl"><span id="text-gallery-tjendana" class="text-secondary"></span> <span id="text-gallery-bistro" class="text-primary"></span></h3>
+        <p id="text-gallery-description" class="font-poppins mt-5 text-2xl italic font-light"></p>
 
-        <a href="https://maps.app.goo.gl/fPeCZPHwxjAR1aaLA" target="_blank" rel="noopener noreferrer"
-          class="btn btn-lg rounded-none mt-12 btn-primary text-white font-medium text-2xl">
-          Explore Authentic Asian Food
-        </a>
+        <div id="link-wrapper-explore-tjendana">
+          <a id="link-explore-tjendana"
+            href="https://maps.app.goo.gl/fPeCZPHwxjAR1aaLA" target="_blank" rel="noopener noreferrer"
+            class="btn btn-lg rounded-none mt-12 btn-primary text-white font-medium text-2xl">
+            Explore Authentic Asian Food
+          </a>
+        </div>
       </div>
     </section>
     <!-- ./Gallery Section -->
@@ -296,6 +299,30 @@
         .to("#section-landing-page", {
           duration: 0.5,
           y: -1920,
+        })
+        .from("#image-carousel", {
+          duration: 0.5,
+          opacity: 0,
+        })
+        .to("#text-gallery-tjendana", {
+          duration: 0.5,
+          ease: "none",
+          text: "Tjendana"
+        })
+        .to("#text-gallery-bistro", {
+          duration: 0.5,
+          ease: "none",
+          text: "Bistro"
+        })
+        .to("#text-gallery-description", {
+          delay: 1,
+          duration: 5,
+          ease: "none",
+          text: "We will make you feel like home, a sense of comfort and warmth with authentic Asian dishes cooked with all our heart"
+        })
+        .from("#link-wrapper-explore-tjendana", {
+          duration: 0.5,
+          opacity: 0,
         });
     });
   }
