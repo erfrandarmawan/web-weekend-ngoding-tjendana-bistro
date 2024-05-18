@@ -1,5 +1,11 @@
 <template>
-  
+  <main class="w-full h-auto flex flex-col bg-white">
+    <!-- Landing Page Section -->
+    <section id="section-landing-page" class="w-full h-screen flex items-center justify-center">
+      <img src="https://ik.imagekit.io/b3amk7ihm/tjendana_logo.png" class="w-40 md:w-60 xl:w-60"/>
+    </section>
+    <!-- ./Landing Page Section -->
+  </main>
 </template>
 
 <script setup lang="ts">
