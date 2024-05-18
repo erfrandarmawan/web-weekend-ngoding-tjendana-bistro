@@ -136,7 +136,7 @@
         <div id="moment-dine-in" class="flex flex-row w-full justify-center mt-20 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
             <img src="https://ik.imagekit.io/b3amk7ihm/1716045796159.webp"
-              class="w-full h-full object-cover"/>
+              class="w-full h-full object-cover hover:scale-110 duration-300"/>
           </div>
 
           <h2 class="uppercase text-8xl">Dine In</h2>
@@ -145,7 +145,7 @@
         <div id="moment-wedding" class="flex flex-row-reverse w-full justify-center mt-28 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
             <img src="https://ik.imagekit.io/b3amk7ihm/1716045858269.webp"
-              class="w-full h-full object-cover"/>
+              class="w-full h-full object-cover hover:scale-110 duration-300"/>
           </div>
 
           <h2 class="uppercase text-8xl">Wedding</h2>
@@ -154,7 +154,7 @@
         <div id="moment-birthday" class="flex flex-row w-full justify-center mt-28 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
             <img src="https://ik.imagekit.io/b3amk7ihm/1716045941027.webp"
-              class="w-full h-full object-cover"/>
+              class="w-full h-full object-cover hover:scale-110 duration-300"/>
           </div>
 
           <h2 class="uppercase text-8xl">Birthday</h2>
@@ -163,7 +163,7 @@
         <div id="moment-meeting" class="flex flex-row-reverse w-full justify-center mt-28 mb-20 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
             <img src="https://ik.imagekit.io/b3amk7ihm/1716045975039.webp"
-              class="w-full h-full object-cover"/>
+              class="w-full h-full object-cover hover:scale-110 duration-300"/>
           </div>
 
           <h2 class="uppercase text-8xl">Meeting</h2>
