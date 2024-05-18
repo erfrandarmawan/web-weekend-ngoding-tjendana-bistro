@@ -12,11 +12,11 @@
     <!-- Gallery Section -->
     <section id="section-gallery" class="w-full h-screen flex items-center justify-center">
       <div class="w-2/3 h-screen">
-        <div id="image-carousel" class="carousel w-full h-screen">
+        <div id="image-carousel" class="carousel w-full h-screen bg-slate-50">
           <div id="slide1" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full object-cover" />
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716044865197.webp" class="w-full object-contain" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" class="btn btn-circle">
+              <a href="#slide5" class="btn btn-circle">
                 <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a> 
               <a href="#slide2" class="btn btn-circle">
@@ -26,7 +26,7 @@
           </div>
           
           <div id="slide2" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full object-cover" />
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716044948248.webp" class="w-full object-contain" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide1" class="btn btn-circle">
                 <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
@@ -38,7 +38,7 @@
           </div>
 
           <div id="slide3" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full object-cover" />
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045016863.webp" class="w-full object-contain" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide2" class="btn btn-circle">
                 <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
@@ -50,9 +50,21 @@
           </div>
 
           <div id="slide4" class="carousel-item relative w-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full object-cover" />
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045044196.webp" class="w-full object-contain" />
             <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide3" class="btn btn-circle">
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
+              </a> 
+              <a href="#slide5" class="btn btn-circle">
+                <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-right']" class="text-3xl"></font-awesome-icon></ClientOnly>
+              </a>
+            </div>
+          </div>
+          
+          <div id="slide5" class="carousel-item relative w-full">
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045141801.webp" class="w-full object-contain" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">
                 <ClientOnly><font-awesome-icon :icon="['fas', 'chevron-left']" class="text-3xl"></font-awesome-icon></ClientOnly>
               </a> 
               <a href="#slide1" class="btn btn-circle">
@@ -70,7 +82,7 @@
         <div id="link-wrapper-explore-tjendana">
           <a id="link-explore-tjendana"
             href="https://maps.app.goo.gl/fPeCZPHwxjAR1aaLA" target="_blank" rel="noopener noreferrer"
-            class="btn btn-lg rounded-none mt-12 btn-primary text-white font-medium text-2xl">
+            class="btn btn-lg w-full rounded-none mt-12 btn-primary text-white font-medium text-2xl">
             Explore Authentic Asian Food
           </a>
         </div>
@@ -103,8 +115,11 @@
               slidesOffsetBefore: 0
             },
           }">
-          <SwiperSlide v-for="(item, index) in popularMenu" :key="index">
-            <img :src="item.image" class='w-[270px] min-w-[270px] h-[324px] min-h-[324px] lg:w-[360px] lg:min-w-[360px] lg:h-[432px] lg:min-h-[432px] object-cover rounded-[20px] duration-300 mx-auto'/>
+          <SwiperSlide v-for="(item, index) in popularMenu" :key="index"
+            class="tooltip"
+            :data-tip="item.name">
+            <img :src="item.image" 
+              class='w-[270px] min-w-[270px] h-[324px] min-h-[324px] lg:w-[360px] lg:min-w-[360px] lg:h-[432px] lg:min-h-[432px] object-cover rounded-[20px] duration-300 mx-auto border'/>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -112,7 +127,7 @@
     <!-- ./Popular Menu Section -->
 
     <!-- Moment Section -->
-    <section id="section-moment" class="w-full min-h-screen flex flex-col items-center bg-cover bg-center bg-no-repeat bg-fixed relative" style="background-image: url('https://clothy-backend.develobe.id/images/1706767464417.webp')">
+    <section id="section-moment" class="w-full min-h-screen flex flex-col items-center bg-cover bg-center bg-no-repeat bg-fixed relative" style="background-image: url('https://ik.imagekit.io/b3amk7ihm/')">
       <div class="bg-white bg-opacity-80 absolute top-0 w-full h-full z-10"></div>
 
       <div class="flex flex-col z-10">
@@ -120,7 +135,7 @@
 
         <div id="moment-dine-in" class="flex flex-row w-full justify-center mt-20 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
-            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045796159.webp"
               class="w-full h-full object-cover"/>
           </div>
 
@@ -129,7 +144,7 @@
 
         <div id="moment-wedding" class="flex flex-row-reverse w-full justify-center mt-28 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
-            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045858269.webp"
               class="w-full h-full object-cover"/>
           </div>
 
@@ -138,7 +153,7 @@
 
         <div id="moment-birthday" class="flex flex-row w-full justify-center mt-28 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
-            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045941027.webp"
               class="w-full h-full object-cover"/>
           </div>
 
@@ -147,7 +162,7 @@
 
         <div id="moment-meeting" class="flex flex-row-reverse w-full justify-center mt-28 mb-20 font-poppins font-extralight items-center gap-24">
           <div class="w-[500px] h-[500px] rounded-2xl overflow-hidden">
-            <img src="https://clothy-backend.develobe.id/images/1706767464417.webp"
+            <img src="https://ik.imagekit.io/b3amk7ihm/1716045975039.webp"
               class="w-full h-full object-cover"/>
           </div>
 
@@ -231,41 +246,29 @@
   // Variables
   const popularMenu = ref([
     {
-      "name": "ABC",
-      "image": "https://clothy-backend.develobe.id/images/1706767464417.webp"
+      "name": "Mango Chicken",
+      "image": "https://ik.imagekit.io/b3amk7ihm/1716045284385.webp"
     },
     {
-      "name": "BCA",
-      "image": "https://clothy-backend.develobe.id/images/1706767454658.webp"
+      "name": "Tahu Cabe Garam",
+      "image": "https://ik.imagekit.io/b3amk7ihm/1716045362532.webp"
     },
     {
-      "name": "DEV",
-      "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
+      "name": "Ikan Malas Stim Kecap Asin",
+      "image": "https://ik.imagekit.io/b3amk7ihm/1716045390366.webp"
     },
     {
-      "name": "ABC",
-      "image": "https://clothy-backend.develobe.id/images/1706767464417.webp"
+      "name": "Baby Kailan 2 Rasa",
+      "image": "https://ik.imagekit.io/b3amk7ihm/1716045448310.webp"
     },
     {
-      "name": "BCA",
-      "image": "https://clothy-backend.develobe.id/images/1706767454658.webp"
+      "name": "Grill Jumbo Sotong",
+      "image": "https://ik.imagekit.io/b3amk7ihm/1716045479952.webp"
     },
     {
-      "name": "DEV",
-      "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
+      "name": "Chicken Satay Bumbu Kacang",
+      "image": "https://ik.imagekit.io/b3amk7ihm/1716045536646.webp"
     },
-    {
-      "name": "ABC",
-      "image": "https://clothy-backend.develobe.id/images/1706767464417.webp"
-    },
-    {
-      "name": "BCA",
-      "image": "https://clothy-backend.develobe.id/images/1706767454658.webp"
-    },
-    {
-      "name": "DEV",
-      "image": "https://clothy-backend.develobe.id/images/1706767436391.webp"
-    }
   ]);
 
   // Variables
@@ -412,7 +415,6 @@
           scrollTrigger: {
             trigger: "#section-contact",
             start: '50% 50%',
-            markers: true,
           }
         })
         .from("#divider-contact", {
